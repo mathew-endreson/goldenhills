@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Hotel Golden Hills | Luxury Hotel in Sétif, Algeria</title>
+    <meta name="description"
+        content="Discover Hotel Golden Hills, Sétif's premier luxury hotel. Elegant rooms, fine dining, spa & wellness, and world-class Algerian hospitality await. Book direct today.">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hotel Golden Hills | Luxury Hotel in Sétif, Algeria">
+    <meta property="og:description"
+        content="Experience the perfect blend of heritage and luxury in Sétif. Newly renovated rooms, fine dining, and a world-class spa.">
+    <meta property="og:image" content="pictures/facade.jpeg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" id="site-header">
+        <!-- Left Nav -->
+        <nav class="header-nav-left">
+            <a href="#rooms">Rooms &amp; Suites</a>
+            <a href="#dining">Fine Dining</a>
+            <a href="#spa">Wellness &amp; Spa</a>
+        </nav>
+
+        <!-- Hamburger (mobile) -->
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Center Logo -->
+        <a href="#" class="header-logo" id="header-logo">
+            <img src="pictures/logo.png" alt="Hotel Golden Hills">
+        </a>
+
+        <!-- Right Nav -->
+        <nav class="header-nav-right">
+            <a href="#contact">Contact</a>
+
+            <a href="#" class="btn-book" id="btn-book-open">
+                <svg class="arrow-icon" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6L0 12L0 0L6 6Z" fill="currentColor" />
+                </svg>
+                <span>Book Now</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- ========== SIDE NAV (Appears on Scroll) ========== -->
+    <nav class="side-nav" id="side-nav">
+        <a href="#rooms" class="side-nav-link">Rooms</a>
+        <a href="#dining" class="side-nav-link">Dining</a>
+        <a href="#spa" class="side-nav-link">Spa</a>
+        <a href="#contact" class="side-nav-link">Contact</a>
+    </nav>
+
+    <!-- ========== MOBILE NAV ========== -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#rooms" class="mobile-nav-link">Rooms &amp; Suites</a>
+        <a href="#dining" class="mobile-nav-link">Fine Dining</a>
+        <a href="#spa" class="mobile-nav-link">Wellness &amp; Spa</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#" class="btn-book mobile-book-btn" id="mobile-book-btn">Book Now</a>
+    </nav>
+
+    <!-- ========== BOOKING POPUP ========== -->
+    <div class="booking-popup-overlay" id="booking-overlay"></div>
+    <div class="booking-popup" id="booking-popup">
+        <button class="booking-close" id="booking-close" aria-label="Close booking">&times;</button>
+        <h4>Book Your Stay</h4>
+        <form id="booking-form">
+            <div class="booking-form-row">
+                <div class="booking-field">
+                    <label for="checkin">Arrival</label>
+                    <input type="date" id="checkin" name="checkin">
+                </div>
+                <div class="booking-field">
+                    <label for="checkout">Departure</label>
+                    <input type="date" id="checkout" name="checkout">
+                </div>
+            </div>
+            <div class="booking-form-row">
+                <div class="booking-field">
+                    <label for="guests">Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="10" value="2">
+                </div>
+                <div class="booking-field">
+                    <label for="rooms-count">Rooms</label>
+                    <input type="number" id="rooms-count" name="rooms" min="1" max="5" value="1">
+                </div>
+            </div>
+            <div class="booking-perks">
+                <span>✓ Best Rates Guaranteed</span>
+                <span>✓ No Booking Fee</span>
+                <span>✓ Complimentary Breakfast</span>
+                <span>✓ Premium Location</span>
+            </div>
+            <button type="submit" class="booking-submit">Book Room</button>
+        </form>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-media">
+            <video class="hero-video" id="hero-video" autoplay muted loop playsinline poster="pictures/facade.jpeg">
+                <source src="pictures/videos/videoplayback.mp4" type="video/mp4">
+            </video>
+            <!-- Fallback image slides (shown if video fails) -->
+            <div class="hero-slide" id="hero-slide-1">
+                <img src="pictures/facade.jpeg" alt="Hotel Golden Hills facade at night" loading="eager">
+            </div>
+            <div class="hero-slide" id="hero-slide-2">
+                <img src="pictures/entrance.jpeg" alt="Hotel Golden Hills entrance" loading="eager">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-subtitle">Experience Algerian Hospitality</p>
+            <h1 class="hero-title">The Perfect Blend of Heritage and Luxury in Sétif</h1>
+        </div>
+
+        <div class="hero-scroll" id="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ========== FLOATING IMAGES (NEW) ========== -->
+    <section class="floating-gallery" id="floating-gallery">
+        <div class="floating-gallery-container">
+            <div class="floating-image floating-img-1 reveal">
+                <img src="pictures/facade.jpeg" alt="Hotel exterior" loading="lazy" data-parallax="-80">
+            </div>
+            <div class="floating-image floating-img-2 reveal reveal-delay-2">
+                <img src="pictures/entrance.jpeg" alt="Hotel entrance" loading="lazy" data-parallax="-110">
+            </div>
+            <div class="floating-image floating-img-3 reveal reveal-delay-4">
+                <img src="pictures/lobby.jpeg" alt="Hotel lobby details" loading="lazy" data-parallax="-140">
+            </div>
+            <div class="floating-image floating-img-4 reveal reveal-delay-1">
+                <img src="pictures/coffee-shop (1).jpeg" alt="Coffee shop" loading="lazy" data-parallax="-170">
+            </div>
+            <div class="floating-text" data-parallax="-120">
+                <p class="section-subtitle">The Golden Hills Experience</p>
+                <h2 class="section-title">An Oasis of Calm in Sétif</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WELCOME ========== -->
+    <section class="welcome" id="welcome">
+        <div class="welcome-grid">
+            <div class="welcome-image parallax-container reveal">
+                <img src="pictures/lobby 1.jpeg" alt="Hotel Golden Hills lobby lounge" loading="lazy"
+                    data-parallax="-60">
+            </div>
+            <div class="welcome-text" data-parallax="-40">
+                <p class="section-subtitle">Welcome to Golden Hills</p>
+                <h2 class="section-title editorial-title">Where Algerian Heritage Meets <span class="italic-accent">Contemporary Elegance</span></h2>
+                
+                <!-- Rotating Stamp Element -->
+                <div class="rotating-stamp">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text>
+                            <textPath href="#circlePath" startOffset="0%" fill="currentColor">
+                                EST. 2024 • LUXURY HOTEL SÉTIF •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="stamp-center-dot"></div>
+                </div>
+
+                <div class="gold-line gold-line--left"></div>
+                
+                <p class="section-body drop-cap">
+                    Nestled in the heart of Sétif, Hotel Golden Hills is a sanctuary of refined comfort and timeless
+                    luxury. Our newly renovated rooms blend traditional Algerian warmth with modern sophistication,
+                    offering an intimate residential atmosphere unlike any other.
+                </p>
+                <br>
+                <p class="section-body">
+                    Just steps from Sétif Railway Station and the iconic Kawthar Mosque, our boutique property invites
+                    you to experience the city's rich heritage while enjoying world-class amenities, exquisite dining,
+                    and personalized service that anticipates your every need.
+                </p>
+                
+                <a href="#rooms" class="btn-magnetic">
+                    <span class="btn-magnetic-text">Discover More</span>
+                    <span class="btn-magnetic-icon">
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ROOMS & SUITES ========== -->
+    <section class="rooms" id="rooms">
+        <div class="rooms-header" data-parallax="-30">
+            <p class="section-subtitle">Accommodations</p>
+            <h2 class="section-title editorial-title">Our <span class="italic-accent">Rooms &amp; Suites</span></h2>
+            <div class="gold-line"></div>
+        </div>
+
+        <div class="rooms-carousel-wrapper">
+            <div class="rooms-carousel" id="rooms-carousel">
+                <!-- Card 1: Standard Guest Room -->
+                <article class="room-card reveal">
+                    <div class="room-card-image">
+                        <img src="pictures/single room.jpeg" alt="Standard Guest Room at Hotel Golden Hills"
+                            loading="lazy" data-parallax="-50">
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-name">Standard Guest Room</h3>
+                        <div class="room-card-meta">
+                            <span>26 m²</span>
+                            <span>1 King Bed</span>
+                        </div>
+                        <a href="#" class="btn-magnetic" style="margin-top: 16px;">
+                            <span class="btn-magnetic-text">View Details</span>
+                            <span class="btn-magnetic-icon">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2: Twin Deluxe Room -->
+                <article class="room-card reveal reveal-delay-1">
+                    <div class="room-card-image">
+                        <img src="pictures/double room.jpeg" alt="Twin Deluxe Room at Hotel Golden Hills" loading="lazy"
+                            data-parallax="-50">
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-name">Twin Deluxe Room</h3>
+                        <div class="room-card-meta">
+                            <span>26 m²</span>
+                            <span>2 Single Beds</span>
+                            <span>City View</span>
+                        </div>
+                        <a href="#" class="btn-magnetic" style="margin-top: 16px;">
+                            <span class="btn-magnetic-text">View Details</span>
+                            <span class="btn-magnetic-icon">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3: Senior Suite -->
+                <article class="room-card reveal reveal-delay-2">
+                    <div class="room-card-image">
+                        <img src="pictures/suite.jpeg" alt="Senior Suite at Hotel Golden Hills" loading="lazy"
+                            data-parallax="-50">
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-name">Senior Suite</h3>
+                        <div class="room-card-meta">
+                            <span>56 m²</span>
+                            <span>1 King Bed</span>
+                            <span>Lounge Area</span>
+                        </div>
+                        <a href="#" class="btn-magnetic" style="margin-top: 16px;">
+                            <span class="btn-magnetic-text">View Details</span>
+                            <span class="btn-magnetic-icon">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 4: Bathroom Detail -->
+                <article class="room-card reveal reveal-delay-3">
+                    <div class="room-card-image">
+                        <img src="pictures/bathroom.jpeg" alt="Marble bathroom at Hotel Golden Hills" loading="lazy"
+                            data-parallax="-50">
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-name">Bathroom Elegance</h3>
+                        <div class="room-card-meta">
+                            <span>Travertine Marble</span>
+                            <span>Glass Rain-Shower</span>
+                        </div>
+                        <a href="#" class="btn-magnetic" style="margin-top: 16px;">
+                            <span class="btn-magnetic-text">View Details</span>
+                            <span class="btn-magnetic-icon">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-arrow" id="rooms-prev" aria-label="Previous room">
+                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.2" fill="none" />
+                    </svg>
+                </button>
+                <div class="carousel-dots" id="rooms-dots">
+                    <button class="carousel-dot active" data-index="0" aria-label="Room 1"></button>
+                    <button class="carousel-dot" data-index="1" aria-label="Room 2"></button>
+                    <button class="carousel-dot" data-index="2" aria-label="Room 3"></button>
+                    <button class="carousel-dot" data-index="3" aria-label="Room 4"></button>
+                </div>
+                <button class="carousel-arrow" id="rooms-next" aria-label="Next room">
+                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" fill="none" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FINE DINING ========== -->
+    <section class="dining" id="dining">
+        <div class="dining-bg">
+            <img src="pictures/coffee-shop (1).jpeg" alt="Hotel Golden Hills dining" loading="lazy" data-parallax="-90">
+        </div>
+        <div class="dining-overlay"></div>
+
+        <div class="dining-content" data-parallax="-50">
+            <p class="section-subtitle" style="color: var(--gh-gold-light);">Culinary Excellence</p>
+            <h2 class="section-title editorial-title" style="color: var(--gh-white);">Gastronomy at <span class="italic-accent">Golden Hills</span></h2>
+            <div class="gold-line"></div>
+
+            <div class="dining-cards">
+                <div class="dining-card reveal" data-parallax="-30">
+                    <h3>Le Gastronome</h3>
+                    <p>A refined fusion of Algerian and Mediterranean cuisine, crafted with locally sourced ingredients
+                        and presented with artistic flair.</p>
+                </div>
+                <div class="dining-card reveal reveal-delay-1" data-parallax="-60">
+                    <h3>La Pizzeria Italiana</h3>
+                    <p>Authentic Italian flavors in a warm, inviting setting. Handmade pastas and wood-fired pizzas
+                        prepared by master chefs.</p>
+                </div>
+                <div class="dining-card reveal reveal-delay-2" data-parallax="-90">
+                    <h3>The Breakfast Club</h3>
+                    <p>Start your morning in style with an exquisite breakfast spread featuring local delicacies and
+                        international favorites.</p>
+                </div>
+            </div>
+
+            <a href="#" class="btn-magnetic btn-magnetic--white">
+                <span class="btn-magnetic-text">Explore Our Restaurants</span>
+                <span class="btn-magnetic-icon">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== WELLNESS & SPA ========== -->
+    <section class="spa" id="spa" style="position: relative;">
+        <!-- Creative Watermark -->
+        <div class="watermark-text" data-parallax="-120">WELLNESS</div>
+
+        <div style="text-align:center; margin-bottom: 56px;" data-parallax="-40">
+            <p class="section-subtitle">Relaxation &amp; Renewal</p>
+            <h2 class="section-title editorial-title">Wellness <span class="italic-accent">&amp; Spa</span></h2>
+            <div class="gold-line"></div>
+        </div>
+
+        <div class="spa-grid">
+            <!-- Large hero card -->
+            <div class="spa-hero-card parallax-container reveal">
+                <img src="pictures/spa pool.jpeg" alt="Indoor pool at Hotel Golden Hills Spa" loading="lazy"
+                    data-parallax="-80">
+                <div class="spa-hero-overlay">
+                    <p class="section-subtitle">The Spa</p>
+                    <h3 class="section-title"
+                        style="color:#fff; font-size: clamp(20px, 2.5vw, 30px); margin-bottom: 12px;">A Haven of
+                        Tranquility</h3>
+                    <p>Immerse yourself in our world-class wellness sanctuary featuring an indoor heated pool,
+                        state-of-the-art fitness centre, and a curated menu of rejuvenating treatments.</p>
+                </div>
+            </div>
+
+            <!-- Small card: Sauna -->
+            <div class="spa-small-card parallax-container reveal reveal-delay-1">
+                <img src="pictures/spa sauna.jpeg" alt="Cedar sauna at Hotel Golden Hills" loading="lazy"
+                    data-parallax="-60">
+                <div class="spa-card-label">
+                    <h3>Cedar Sauna</h3>
+                    <span>Purify &amp; Revitalise</span>
+                </div>
+            </div>
+
+            <!-- Small card: Hammam -->
+            <div class="spa-small-card parallax-container reveal reveal-delay-2">
+                <img src="pictures/spa hamam.jpeg" alt="Traditional Hammam at Hotel Golden Hills" loading="lazy"
+                    data-parallax="-50">
+                <div class="spa-card-label">
+                    <h3>Traditional Hammam</h3>
+                    <span>Ancient Ritual, Modern Comfort</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT NOOK ========== -->
+    <section class="contact" id="contact" style="position: relative;">
+        <!-- Creative Watermark -->
+        <div class="watermark-text watermark-text--dark" data-parallax="80">SÉTIF</div>
+
+        <div class="contact-grid">
+            <div class="contact-image parallax-container reveal">
+                <img src="pictures/coffee-shop (2).jpeg" alt="Hotel Golden Hills coffee lounge" loading="lazy"
+                    data-parallax="-70">
+            </div>
+            <div class="contact-info" data-parallax="-50">
+                <p class="section-subtitle">Get in Touch</p>
+                <h2 class="section-title editorial-title">Plan Your <span class="italic-accent">Arrival</span></h2>
+                <div class="gold-line gold-line--left"></div>
+
+                <div class="contact-details">
+                    <!-- Address -->
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="currentColor" />
+                        </svg>
+                        <p>Rue Champs d'azur<br>Sétif, 19000<br>Algeria</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                fill="currentColor" />
+                        </svg>
+                        <p>
+                            <a href="tel:+21330793030">+213 (0) 30 79 30 30</a><br>
+                            <a href="tel:+213770515359">+213 (0) 770 51 53 59</a>
+                        </p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                fill="currentColor" />
+                        </svg>
+                        <p><a href="mailto:contact@hotelgoldenhills.dz">contact@hotelgoldenhills.dz</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-landmarks reveal reveal-delay-3">
+                    <h4>Nearby Landmarks</h4>
+                    <ul>
+                        <li>Sétif Railway Station — 5 min walk</li>
+                        <li>Kawthar Mosque — 3 min walk</li>
+                        <li>Ain El Fouara Fountain — 10 min walk</li>
+                        <li>Sétif National Museum — 12 min walk</li>
+                    </ul>
+                </div>
+
+                <br>
+                <a href="https://maps.google.com/?q=Setif+Algeria" target="_blank" rel="noopener"
+                    class="btn-magnetic">
+                    <span class="btn-magnetic-text">Get Directions</span>
+                    <span class="btn-magnetic-icon">
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-gold-border"></div>
+
+        <div class="footer-main">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <img src="pictures/logo.png" alt="Hotel Golden Hills" class="footer-logo">
+                <p>A sanctuary of refined comfort and timeless luxury in the heart of Sétif, where Algerian heritage
+                    meets contemporary elegance.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#rooms">Rooms &amp; Suites</a></li>
+                    <li><a href="#dining">Fine Dining</a></li>
+                    <li><a href="#spa">Wellness &amp; Spa</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p class="footer-contact-item">Rue Champs d'azur<br>Sétif, 19000, Algeria</p>
+                <p class="footer-contact-item"><a href="tel:+21330793030">+213 (0) 30 79 30 30</a></p>
+                <p class="footer-contact-item"><a href="tel:+213770515359">+213 (0) 770 51 53 59</a></p>
+                <p class="footer-contact-item"><a
+                        href="mailto:contact@hotelgoldenhills.dz">contact@hotelgoldenhills.dz</a></p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive exclusive offers, seasonal updates, and insider access to Golden Hills events.
+                </p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your email address" required aria-label="Email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hotel Golden Hills. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Lenis for Cinematic Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
